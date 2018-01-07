@@ -46,29 +46,3 @@ When generated as React components, such syntax can be nicely seen in the debugg
 
 * To be considered as React Components, the tag names must start by an uppercase. But this rule helps to prevent from conflicts (see custom elements) 
 * The plugin `eslint-plugin-react` raise warnings such as `Font_size must be in PascalCase` related to the `react/jsx-pascal-case`rule
-
-### Custom Elements
-
-The same result can be provided more **natively** in the [Chrome DevTools Elements panel](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) when using [HTML5 Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements)
-
-#### Potential conflicts for custom elements
-
-Two textblock property names match with already existing HTML tag names:
-
-* `<font>` (deprecated)
-* `<style>` (used for inline CSS)
-
-They still can be overriden using `getElementsByTagName()`, reading their custom attributes and applying the custom style in JS.
-This custom style should not be set via an attribute to not pollute the tag representation in the DOM.
-The `<style>` tag may need an additional `type="textblock"` attribute to prevent its content to be interpreted as CSS.
-
-### Edit Feature
-
-TBD
-
-To get even more advantages from the devtool interface, we could use a [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
-
-Those observer can be disconnected during refresh, and reconnected after refresh.
-
-They would let this EFL tool detect when the DOM is modified via the DevTool, and it could then send an update command via the the [remote debugging protocol](https://chromedevtools.github.io/debugger-protocol-viewer/1-2/) that is activated only when the UI is launched in "inspect" mode.
-It could use its [`evaluate` command](https://chromedevtools.github.io/devtools-protocol/1-2/Runtime/#method-evaluate) to manipulate the UI state, potentialy via the **testtools** `NodeTracker` API. 
