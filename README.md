@@ -10,7 +10,7 @@ Example
 ```jsx
 <Win>
     <Group>
-        <Rectangle size={{w:30,h:30}} color={{r:255}}/>
+        <Rectangle size={{w:30,h:30}} color={{r:255,v:0,b:0}}/>
         <Image size={{w:30,h:30}}
                file={'http://example.com/log.png'} />
         <Text color={'#F55'} font_size={42}>react-efl <Color color={'#00F'}>Demo</Color></Text>
