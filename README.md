@@ -12,7 +12,7 @@ Example
     <Group>
         <Rectangle size={{w:30,h:30}} color={{r:255}}/>
         <Image size={{w:30,h:30}}
-               file={'http://example.com/log.png} />
+               file={'http://example.com/log.png'} />
         <Text color={'#F55'} font_size={42}>react-efl <Color color={'#00F'}>Demo</Color></Text>
     </Group>
 </Win>
