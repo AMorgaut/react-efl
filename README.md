@@ -18,6 +18,9 @@ Example
 </Win>
 ```
 
+It can be interesting to render an EFL view in the browser and see its representation  from the [React Chrome Developer tools](https://reactjs.org/blog/2014/01/02/react-chrome-developer-tools.html)
+
+
 [build-badge]: https://img.shields.io/travis/amorgaut/react-efl/master.png?style=flat-square
 [build]: https://travis-ci.org/AMorgaut/react-efl
 
