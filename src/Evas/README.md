@@ -32,7 +32,7 @@ We then duplicates the tag name as an inner attribute that receives the value ex
 Ex: 
 
 ```xml
-some text <font_size font_size="12" font_weight="bold" color="#5F6B">styled text</font_size>
+some text <Font_size font_size="12" font_weight="bold" color="#5F6B">styled text</Font_size>
 ```
 
 
