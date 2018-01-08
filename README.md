@@ -28,11 +28,12 @@ Support most of the [Evas TextBlock Style definitions](https://docs.enlightenmen
 
 # Roadmap
 
-1. Handle positioning
-2. Support more `Group`, `Rectangle`, `Image`, & `Text` features
-3. Support more [`Efl.Object`](https://www.enlightenment.org/develop/api/efl/object) & [`Efl.Canvas`](https://www.enlightenment.org/develop/api/efl/canvas) level features
-4. some Animations features
-5. ...
+1. Add Unit tests
+2. Handle positioning
+3. Support more `Group`, `Rectangle`, `Image`, & `Text` features
+4. Support more [`Efl.Object`](https://www.enlightenment.org/develop/api/efl/object) & [`Efl.Canvas`](https://www.enlightenment.org/develop/api/efl/canvas) level features
+5. some Animations features
+6. Many potential things like `Video`or `Player` support, or anything requested via the [Issues project page](https://github.com/AMorgaut/react-efl/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) ...
 
 [build-badge]: https://img.shields.io/travis/amorgaut/react-efl/master.png?style=flat-square
 [build]: https://travis-ci.org/AMorgaut/react-efl
