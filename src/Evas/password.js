@@ -1,5 +1,4 @@
 
-
 /**
  * Sets if the text is being used for passwords.
  * Enabling this causes all characters to be substituted for '*'.
@@ -15,5 +14,3 @@
 export function password_adapter(style) {
     style.WebkitTextSecurity = 'disc';
 }
-
-

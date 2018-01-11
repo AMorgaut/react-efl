@@ -1,5 +1,4 @@
 
-
 /**
  * Sets ellipsis mode.
  *
@@ -26,5 +25,3 @@ export function ellipsis_adapter(style, value) {
         style.textOverflow = '';
     }
 }
-
-

@@ -1,5 +1,4 @@
 
-
 /**
  * Sets the left right of the text.
  *
@@ -17,5 +16,3 @@
 export function right_margin_adapter(style, value) {
     style.marginRight = (value === 'reset') ? 0 : value;
 }
-
-

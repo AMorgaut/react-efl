@@ -1,5 +1,4 @@
 
-
 const UNDERLINE_MAP = {
     off: 'unset',
     single: 'solid',
@@ -31,5 +30,3 @@ export function underline_adapter(style, value) {
         style.textDecorationStyle = UNDERLINE_MAP[value];
     }
 }
-
-

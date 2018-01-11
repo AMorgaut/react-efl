@@ -1,5 +1,4 @@
 
-
 /**
  * Sets the size of line of text.
  *
@@ -13,5 +12,3 @@
 export function linesize_adapter(style, value) {
     style.lineHeight = `${value}px`;
 }
-
-

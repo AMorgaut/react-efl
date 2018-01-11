@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import CanvasObject from './CanvasObject';
 import { getOpacity } from '../Evas/util/color';
 
 /**
@@ -7,70 +6,47 @@ import { getOpacity } from '../Evas/util/color';
  */
 export default class Image extends Component {
 
-    constructor(props) {
-        super(props);
-        Object.assign(this, CanvasObject);
-    }
-
-    /**
-     * Set the source file from where an image object must fetch the real image data
-     *
-     * @see https://www.enlightenment.org/develop/api/efl/file/property/file
-     * @param {string} file The image file path
-     */
-    setFile(file) {
-        Object.assign(this.props, { file });
-    }
-
-    /**
-     * Specifies how to tile an image to fill its rectangle geometry.
-     * 
-     * @see https://www.enlightenment.org/develop/api/efl/canvas/image/internal/property/fill
-     * @param {number} x1
-     * @param {number} x2
-     * @param {number} y1
-     * @param {number} y2
-     */
-    setFill(x1, x2, y1, y2) {
-        Object.assign(this.props.fill, { x1, x2, y1, y2 });
-    }
-
-    /**
-     * Binds the object's Efl.Gfx.Fill.fill property to its actual geometry.
-     * @see https://www.enlightenment.org/develop/api/efl/canvas/image/internal/property/fill_auto
-     * @param {boolean} auto
-     */
-    setFillAuto(auto) {
-        if (auto) {
-            const { position, size } = this.props;
-            const { x, y } = position;
-            const { w, h } = size;
-            this.setFill(x, x + w, y, y + h);
-        }
-    }
-
     render() {
 
-        const {
-            file = null,
-            size = {},
-            position = {},
-            color = {},
-            opacity,
-        } = this.props;
-
-        const { w = 0, h =0 } = size;
-        const { x = 0, y = 0 } = position;
+        const { name, file, position = {}, size = {}, border, fill, color = {}, visible = true, opacity } = this.props;
+        const { x = 0,  y = 0 } = position;
+        const { w,  h } = size;
         const { a: alpha } = color;
-
         const style = {
-            width: `${w}px`,
-            height: `${h}px`,
-            left: `${x}px`,
-            top: `${y}px`,
+            position: 'absolute',
+            left: x,
+            top: y,
+            width: w,
+            height: h,
+            visibility: visible ? 'shown' : 'hidden',
             opacity: getOpacity(opacity || alpha || 255),
         };
 
-        return <img src={file} style={style} />;
+        if (border) {
+            const { t, r, l, b } = border;
+            // top, right, left, bottom
+            style.borderWidth = `${t}px ${r}px ${l}px ${b}px`;
+            style.borderStyle = 'solid';
+        }
+
+        let blockStyle;
+        if (fill) {
+            blockStyle = Object.assign({}, style);
+            Object.assign(style, {
+                position: 'relative',
+                left: fill.x,
+                top: fill.y,
+                width: fill.w,
+                height: fill.h,
+                borderWidth: '',
+                borderStyle: '',
+                opacity: '',
+            });
+        }
+
+        const alt = '';
+        const image = <img id={name} src={file} style={style} alt={alt} />;
+
+        return fill ? <div {...blockStyle}>{image}</div> : image;
     }
 }

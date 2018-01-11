@@ -1,5 +1,4 @@
 
-
 /**
  * Sets the wrap policy of the text.
  *
@@ -44,5 +43,3 @@ export function wrap_adapter(style, value) {
             console.error('Invalid wrap value', value);
     }
 }
-
-

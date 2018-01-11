@@ -14,5 +14,3 @@ import { hexaToRgba } from "./util/color";
 export function underline_dash_color_adapter(style, value) {
     style.textDecorationColor = hexaToRgba(value);
 }
-
-

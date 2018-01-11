@@ -9,11 +9,23 @@ Allows to represent Enlightenment Efl components as a DOM structure.
 Example
 ```jsx
 <Win>
-    <Group>
-        <Rectangle size={{w:30,h:30}} color={{r:255,v:0,b:0}}/>
-        <Image size={{w:30,h:30}}
-               file={'http://example.com/log.png'} />
-        <Text color={'#F55'} font_size={42}>react-efl <Color color={'#00F'}>Demo</Color></Text>
+    <Group name={'text-block'}
+           position={pos}
+           zoom={{sx: -10, sy: -10, x: 200, y: 21}}
+           rotate={{d: -5, x: 200, y: 21}}>
+        <Rectangle position={pos}
+                   size={{ w: 400, h }}
+                   color={{ r: 200, g: 200, b: 200 }}/>
+        <Image position={pos}
+               size={size}
+               file={'http://example.com/logo.png'} />
+        <Text position={{ x: 70, y }}
+              color={'#F55'}
+              font_size={h}
+              linesize={h}
+              valign={'middle'}>
+            react-efl <Color color={'#00A'}>demo</Color>
+        </Text>
     </Group>
 </Win>
 ```
@@ -35,7 +47,7 @@ Support most of the [Evas TextBlock Style definitions](https://docs.enlightenmen
 5. some Animations features
 6. Many potential things like `Video`or `Player` support, or anything requested via the [Issues project page](https://github.com/AMorgaut/react-efl/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) ...
 
-[build-badge]: https://img.shields.io/travis/amorgaut/react-efl/master.png?style=flat-square
+[build-badge]: https://img.shields.io/travis/AMorgaut/react-efl/master.png?style=flat-square
 [build]: https://travis-ci.org/AMorgaut/react-efl
 
 [npm-badge]: https://img.shields.io/npm/v/react-efl.png?style=flat-square

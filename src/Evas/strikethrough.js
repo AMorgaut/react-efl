@@ -1,5 +1,4 @@
 
-
 /**
  * Sets if the text will be striked through.
  *
@@ -21,5 +20,3 @@ export function strikethrough_adapter(style, value) {
         console.error('Invalide strikethrough value:', value);
     }
 }
-
-

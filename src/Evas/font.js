@@ -1,4 +1,6 @@
 
+import { font_weight_adapter } from "./font_weight";
+
 /**
  * This sets the the size of font in points to be used.
  *

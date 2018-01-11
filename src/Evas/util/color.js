@@ -15,6 +15,14 @@ export function getOpacity(word) {
  */
 export function hexaToRgba(hexa) {
 
+    if (typeof hexa === 'object') {
+        // not an hexa value
+        // should be an efl compliant color
+        const {r = 0, g = 0, b = 0, a = 255} = hexa;
+        const alpha = getOpacity(a);
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
+    
     // support shorthand color values as #RGB & #RGBA
     // and removes the sharp (#) character
     const fullHexa = hexa.length >= 7 ?

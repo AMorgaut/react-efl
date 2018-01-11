@@ -1,5 +1,4 @@
 
-
 const WEIGHT_MAP = {
     thin: 100,
     ultralight: 100,
@@ -42,5 +41,3 @@ const WEIGHT_MAP = {
 export function font_weight_adapter(style, value) {
     style.fontWeight = WEIGHT_MAP[value];
 }
-
-

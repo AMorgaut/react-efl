@@ -1,5 +1,4 @@
 
-
 const STRECH_MAP = {
     normal: 'normal',
     ultracondensed: 'ultra-condensed',
@@ -28,5 +27,3 @@ const STRECH_MAP = {
 export function font_width_adapter(style, value) {
     style.fontStrech = STRECH_MAP[value];
 }
-
-

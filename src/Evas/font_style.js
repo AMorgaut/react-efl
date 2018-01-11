@@ -1,4 +1,3 @@
-import TextBlock from './TextBlock';
 
 /**
  * Sets the style of the font.
@@ -12,5 +11,3 @@ import TextBlock from './TextBlock';
 export function font_style_adapter(style, value) {
     style.fontStyle = value;
 }
-
-

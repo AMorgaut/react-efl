@@ -1,5 +1,4 @@
 
-
 /**
  * Sets the size of the tab character.
  *
@@ -13,5 +12,3 @@
 export function tabstops_adapter(style, value) {
     style.tabSize = Number(value);
 }
-
-

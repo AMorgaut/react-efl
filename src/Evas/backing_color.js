@@ -14,5 +14,3 @@ import { hexaToRgba } from "./util/color";
 export function backing_color_adapter(style, value) {
     style.backgroundColor = hexaToRgba(value);
 }
-
-

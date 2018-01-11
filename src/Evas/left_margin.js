@@ -1,5 +1,4 @@
 
-
 /**
  * Sets the left margin of the text.
  *
@@ -17,5 +16,3 @@
 export function left_margin_adapter(style, value) {
     style.marginLeft = (value === 'reset') ? 0 : value;
 }
-
-

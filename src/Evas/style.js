@@ -1,5 +1,4 @@
 
-
 // Returns an array [distance, radius]
 const APPEARANCE_MAP = {
     // set distance & radius to 0
@@ -85,5 +84,3 @@ export function style_adapter(style, value) {
 
     style.textShadow = `${x}px ${y}px ${radius}px`;
 }
-
-

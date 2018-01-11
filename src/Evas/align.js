@@ -1,3 +1,4 @@
+
 const NUMBER_REGEXP = /[0-1](\.\d+)?%?/;
 
 const TEXT_ALIGN_CSS_VALUES = [

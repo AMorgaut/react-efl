@@ -1,9 +1,6 @@
-import React, {Component} from 'react'
+import Canvas from './Canvas'
+import TextBlock from './Evas/TextBlock'
+import Ui from './Ui'
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+
+export default { Canvas, Ui, TextBlock }

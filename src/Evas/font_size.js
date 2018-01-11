@@ -1,3 +1,4 @@
+
 const FIX_SIZE_RATIO = 0.76;
 
 /**

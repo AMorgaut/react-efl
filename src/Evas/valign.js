@@ -1,5 +1,4 @@
 
-
 const NUMBER_REGEXP = /\d+(\.\d+)?%?/;
 
 const TEXT_VERTICAL_ALIGN_CSS_VALUES = [
@@ -61,5 +60,3 @@ export function valign_adapter(style, value) {
     const prefix = value.endsWith('%') ? '-' : '';
     style.verticalAlign = `${prefix}${value}`;
 }
-
-

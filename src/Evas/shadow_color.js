@@ -15,5 +15,3 @@ export function shadow_color_adapter(style, value) {
     // save the color in a temporary property to be added to textShadow in post-process
     style.textShadowColor = hexaToRgba(value);
 }
-
-

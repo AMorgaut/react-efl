@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import {align_adapter} from "./align";
 import {backing_color_adapter} from "./backing_color";
@@ -64,8 +64,10 @@ const asis = v => v;
  * @returns {Object}
  */
 export function getFontStyle(evasStyle) {
-    const cssStyle = {};
-    
+    const cssStyle = {
+        whiteSpace: 'pre',
+    };
+
     Object.keys(evasStyle).forEach(key => {
         const adapter = ADAPTERS[`${key}_adapter`] || asis;
         adapter(cssStyle, evasStyle[key]);
@@ -92,21 +94,28 @@ export default function TextBlock(props) {
 }
 
 // Make EVAS TextBlock style tags available as components
-[
-    'Align',
-    'Bakin_color',
-    'Color',
-    'Ellipsis',
-    'Font', 'Font_size', 'Font_style', 'Font_weight', 'Font_width',
-    'Glow_color',
-    'Left_margin', 'Linesize',
-    'Outline_color',
-    'password',
-    'Right_margin',
-    'Shadow_color', 'Strikethrough', 'Strikethrough_color', 'Style',
-    'Tabstops', 'Underline', 'Underline_color', 'Underline_dash_color',
-    'Valign',
-    'Wrap'
-].forEach(name => {
-    eval(`TextBlock.${name} = function ${name} (props) { return  TextBlock(props) };`);
-});
+export function Align(props) { return  TextBlock(props); }
+export function Backing_color(props) { return  TextBlock(props); }
+export function Color(props) { return  TextBlock(props); }
+export function Ellipsis(props) { return  TextBlock(props); }
+export function Font(props) { return  TextBlock(props); }
+export function Font_size(props) { return  TextBlock(props); }
+export function Font_style(props) { return  TextBlock(props); }
+export function Font_weight(props) { return  TextBlock(props); }
+export function Font_width(props) { return  TextBlock(props); }
+export function Glow_color(props) { return  TextBlock(props); }
+export function Left_margin(props) { return  TextBlock(props); }
+export function Linesize(props) { return  TextBlock(props); }
+export function Outline_color(props) { return  TextBlock(props); }
+export function Password(props) { return  TextBlock(props); }
+export function Right_margin(props) { return  TextBlock(props); }
+export function Shadow_color(props) { return  TextBlock(props); }
+export function Strikethrough(props) { return  TextBlock(props); }
+export function Strikethrough_color(props) { return  TextBlock(props); }
+export function Style(props) { return  TextBlock(props); }
+export function Tabstops(props) { return  TextBlock(props); }
+export function Underline(props) { return  TextBlock(props); }
+export function Underline_color(props) { return  TextBlock(props); }
+export function Underline_dash_color(props) { return  TextBlock(props); }
+export function Valign(props) { return  TextBlock(props); }
+export function Wrap(props) { return  TextBlock(props); }
