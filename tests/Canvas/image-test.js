@@ -2,9 +2,9 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import Rectangle from 'src/Canvas/Rectangle'
+import Image from 'src/Canvas/Image'
 
-describe('Rectangle', () => {
+describe('Image', () => {
     let node
 
     beforeEach(() => {
@@ -16,19 +16,19 @@ describe('Rectangle', () => {
     })
 
     it('generates a div HTML tag', () => {
-        render(<Rectangle/>, node, () => {
-            expect(node.firstChild.tagName).toBe('DIV')
+        render(<Image />, node, () => {
+            expect(node.firstChild.tagName).toBe('IMG')
         })
     })
 
     it('converts name property to id attribute', () => {
-        render(<Rectangle name={'foo'}/>, node, () => {
+        render(<Image name={'foo'} />, node, () => {
             expect(node.firstChild.id).toBe('foo')
         })
     })
 
     it('has a valid absolute position', () => {
-        render(<Rectangle position={{x:42, y:51}} />, node, () => {
+        render(<Image position={{x:42, y:51}} />, node, () => {
             const style = node.firstChild.style;
             expect(style.left).toBe('42px')
             expect(style.top).toBe('51px')
@@ -36,24 +36,27 @@ describe('Rectangle', () => {
     })
 
     it('has a valid size', () => {
-        render(<Rectangle size={{w:42, h:51}} />, node, () => {
+        render(<Image size={{w:42, h:51}} />, node, () => {
             const style = node.firstChild.style;
             expect(style.width).toBe('42px')
             expect(style.height).toBe('51px')
         })
     })
 
-    it('has a valid default background color', () => {
-        render(<Rectangle />, node, () => {
+    it('has a valid border', () => {
+        render(<Image border={{ t: 5, l: 1, r: 2, b: 20 }} />, node, () => {
             const style = node.firstChild.style;
-            expect(style.backgroundColor).toBe('rgb(255, 255, 255)')
+            expect(style.borderStyle).toBe('solid')
+            expect(style.borderTopWidth).toBe('5px')
+            expect(style.borderLeftWidth).toBe('1px')
+            expect(style.borderRightWidth).toBe('2px')
+            expect(style.borderBottomWidth).toBe('20px')
         })
     })
 
-    it('has a valid defined background color', () => {
-        render(<Rectangle color={{ r: 50, g: 100, b: 200 }} />, node, () => {
-            const style = node.firstChild.style;
-            expect(style.backgroundColor).toBe('rgb(50, 100, 200)')
+    it('has a valid file path', () => {
+        render(<Image file={'http://example.com/logo.png'} />, node, () => {
+            expect(node.firstChild.src).toBe('http://example.com/logo.png')
         })
     })
 

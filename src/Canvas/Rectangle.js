@@ -22,6 +22,9 @@ export default class Rectangle extends Component {
         if (color) {
             const {r = 0, g = 0, b = 0, a = 255} = color;
             style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
+        } else {
+            // All newly created Evas rectangles get the default color values of 255 255 255 255 (opaque white).
+            style.backgroundColor = `rgba(255, 255, 255, 1)`;
         }
 
         return <div id={name} style={style} />;

@@ -25,7 +25,7 @@ export default class Image extends Component {
         if (border) {
             const { t, r, l, b } = border;
             // top, right, left, bottom
-            style.borderWidth = `${t}px ${r}px ${l}px ${b}px`;
+            style.borderWidth = `${t}px ${r}px ${b}px ${l}px`;
             style.borderStyle = 'solid';
         }
 

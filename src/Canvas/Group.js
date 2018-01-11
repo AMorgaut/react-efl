@@ -4,7 +4,7 @@ import {getOpacity} from "../Evas/util/color";
 // import { getOpacity, hexaToRgba, parseRichText } from '../../../lib/efl';
 
 /**
- * @see https://www.enlightenment.org/develop/api/efl/canvas/image
+ * @see https://www.enlightenment.org/develop/api/efl/canvas/group
  */
 export default class Group extends Component {
 
