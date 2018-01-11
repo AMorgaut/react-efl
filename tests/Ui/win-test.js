@@ -27,4 +27,12 @@ describe('Win', () => {
         })
     })
 
+    it('has a valid favicon', () => {
+        const icon = 'https://github.com/AMorgaut/react-efl/tree/master/demo/src/noun_16016_cc.svg';
+        render(<Win icon={icon}/>, node, () => {
+            const link = document.querySelector("link[rel*='icon']");
+            expect(link.href).toBe(icon)
+        })
+    })
+
 })
