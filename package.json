@@ -1,6 +1,6 @@
 {
   "name": "react-efl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Allows to represent Enlightenment Efl components as a DOM structure. Edit",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -17,14 +17,6 @@
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
-  },
-  "proxy": {
-    "/remoteEFL/*": {
-      "target": "http://172.17.0.100:9229",
-      "pathRewrite": {
-        "^/remoteEFL": ""
-      }
-    }
   },
   "repository": {
     "type": "git",
