@@ -1,7 +1,7 @@
 {
   "name": "react-efl",
   "version": "0.1.1",
-  "description": "Allows to represent Enlightenment Efl components as a DOM structure. Edit",
+  "description": "Allows to represent Enlightenment Efl components as a DOM structure.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [

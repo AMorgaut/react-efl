@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+export let DPI = 96;
+
 /**
  * @class Win
  * @extends Component
@@ -7,7 +9,8 @@ import React, {Component} from 'react'
  */
 export default class Win extends Component {
     render() {
-        const icon = this.props.icon;
+        const { icon, dpi, children } = this.props;
+
         if (icon) {
             (function() {
                 const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
@@ -17,6 +20,11 @@ export default class Win extends Component {
                 document.getElementsByTagName('head')[0].appendChild(link);
             })();
         }
-        return <div className={'win'}>{this.props.children}</div>
+
+        if (dpi) {
+            DPI = dpi;
+        }
+
+        return <div className={'win'}>{children}</div>
     }
 }

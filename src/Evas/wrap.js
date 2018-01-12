@@ -33,9 +33,10 @@ export function wrap_adapter(style, value) {
         case 'hyphenation':
             style.overflowWrap = 'break-word';
             style.wordBreak = 'normal';
-            style.hyphen = 'manual';
+            style.hyphens = 'manual';
             break;
         case '':
+            console.log ('dont wrap')
             style.overflowWrap = 'normal';
             style.wordBreak = 'keep-all';
             break;

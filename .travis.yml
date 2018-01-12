@@ -1,11 +1,23 @@
-sudo: false
+dist: trusty
+sudo: required
 
 language: node_js
 node_js:
   - 8
 
+addons:
+  sonarcloud:
+    organization: "amorgaut-github"
+    token:
+      secure: "e05e998eab0e9104e2b0dea5d63cf7a96f044e4b"
+jdk:
+  - oraclejdk8
+
 before_install:
   - npm install codecov.io coveralls
+
+script:
+  - sonar-scanner
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
@@ -14,3 +26,7 @@ after_success:
 branches:
   only:
     - master
+
+cache:
+  directories:
+    - '$HOME/.sonar/cache'

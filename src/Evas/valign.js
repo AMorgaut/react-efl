@@ -55,8 +55,6 @@ export function valign_adapter(style, value) {
         console.error('non-standard valign value:', value);
         return;
     }
-    style.verticalAlign = cssValue;
 
-    const prefix = value.endsWith('%') ? '-' : '';
-    style.verticalAlign = `${prefix}${value}`;
+    style.verticalAlign = cssValue;
 }
