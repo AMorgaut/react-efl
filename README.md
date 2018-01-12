@@ -3,6 +3,7 @@
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
+[![Sonarcloud][sonarcloud-badge]][sonarcloud]
 
 Allows to represent Enlightenment Efl components as a DOM structure.
 
@@ -55,3 +56,6 @@ Support most of the [Evas TextBlock Style definitions](https://docs.enlightenmen
 
 [coveralls-badge]: https://img.shields.io/coveralls/AMorgaut/react-efl/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/AMorgaut/react-efl
+
+[sonarcloud-badge]: https://sonarcloud.io/api/badges/gate?key=react-efl
+[sonarcloud]: https://sonarcloud.io/dashboard?id=react-efl
