@@ -15,7 +15,7 @@ describe('Text', () => {
         unmountComponentAtNode(node)
     })
 
-    it('generates a div HTML tag', () => {
+    it('generates a span HTML tag', () => {
         render(<Text />, node, () => {
             expect(node.firstChild.tagName).toBe('SPAN')
         })

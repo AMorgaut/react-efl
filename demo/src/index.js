@@ -14,7 +14,7 @@ const { y } = pos;
 const { h } = size;
 
 render(
-    <Win icon={'https://github.com/AMorgaut/react-efl/tree/master/demo/src/noun_16016_cc.svg'}>
+    <Win icon={'https://raw.githubusercontent.com/AMorgaut/react-efl/master/demo/src/noun_16016_cc.svg'}>
         <Group name={'text-block'}
                position={pos}
                zoom={{sx: -10, sy: -10, x: 200, y: 21}}
