@@ -17,7 +17,7 @@ describe('Text', () => {
 
     it('generates a span HTML tag', () => {
         render(<Text />, node, () => {
-            expect(node.firstChild.tagName).toBe('SPAN')
+            expect(node.firstChild.tagName).toBe('DIV')
         })
     })
 

@@ -19,7 +19,7 @@ export default class Text extends Component {
             getFontStyle(this.props),
         );
 
-        return <span id={name} className="Text" style={style}>{children}</span>;
+        return <div id={name} className="Text" style={style}>{children}</div>;
     }
 
 }
